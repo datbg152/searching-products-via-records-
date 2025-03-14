@@ -41,16 +41,16 @@ def search_products(query):
                 }
             }})
 
-    print("\n🔍 Elasticsearch Query:\n", json.dumps(search_body, indent=4))
+    #print("\n🔍 Elasticsearch Query:\n", json.dumps(search_body, indent=4))
 
     response = es.search(index="products", body=search_body)
     return response["hits"]["hits"]
 
-def search_from_json(filename):
-    transcription = load_json_transcription(filename)
-    if isinstance(transcription, dict):
-        query_text = transcription.get("text", "")
-    else:
-        query_text = transcription
-    results = search_products(query_text)
+def search_all_json_files():
+    results = {}
+    for filename in os.listdir(RECORDINGS_PATH):
+        if filename.endswith(".json"):
+            print(f"\n📂 Processing file: {filename}")
+            query_text = load_json_transcription(filename)
+            results[filename] = search_products(query_text)
     return results

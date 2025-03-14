@@ -41,10 +41,7 @@ INSTALLED_APPS = [
     'searchingPart',
     
 ]
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'searchingPart/static')
-]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
