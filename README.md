@@ -92,35 +92,6 @@ This is a personal project designed to explore AI and search technologies. The s
 
 ---
 
-# 🚀 Setup & Installation
-
-### Prerequisites
-
-- Python 3.x installed
-- Elasticsearch running (optional if using Docker)
-
-### Installation Steps
-
-1. Clone this repository:
-   ```sh
-   git clone https://github.com/your-repo-name.git
-   cd your-repo-name
-   ```
-2. Install dependencies:
-   ```sh
-   pip install -r requirements.txt
-   ```
-3. Run the Django server:
-   ```sh
-   python manage.py runserver
-   ```
-4. Start Elasticsearch (if not using Docker):
-   ```sh
-   ./bin/elasticsearch
-   ```
-
----
-
 # 📌 Future Improvements
 
 - Extend voice query support to multiple languages.
